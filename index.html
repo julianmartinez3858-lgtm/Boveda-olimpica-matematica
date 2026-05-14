@@ -853,25 +853,6 @@
             background: var(--secondary);
         }
 
-        /* Admin-only elements - hidden by default */
-        .admin-only {
-            display: none !important;
-        }
-
-        body.admin-mode .admin-only {
-            display: block !important;
-        }
-
-        body.admin-mode .pdf-upload-area {
-            display: block !important;
-            border: 2px dashed var(--secondary);
-        }
-
-        /* Visitor view - clean and simple */
-        .visitor-view {
-            display: block;
-        }
-
     </style>
 <base target="_blank">
 </head>
@@ -1012,26 +993,20 @@
                 </div>
 
                 <div class="content-area">
-                    <div class="storage-info admin-only" id="storage-algebra">
-                        <span>💾</span>
-                        <span>Material disponible: <strong id="size-algebra">0 MB</strong></span>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress-algebra" style="width: 0%"></div>
+                    
                         </div>
                     </div>
 
-                    <div class="pdf-upload-area admin-only" onclick="document.getElementById('pdf-algebra').click()" 
-                         ondrop="handleDrop(event, 'algebra')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
-                        <div class="pdf-upload-icon">📤</div>
-                        <div class="pdf-upload-text">Área de carga de documentos</div>
-                        <div class="pdf-upload-hint">Solo administradores pueden subir archivos</div>
-                        <input type="file" id="pdf-algebra" class="pdf-input" accept=".pdf" multiple onchange="handleFiles(this.files, 'algebra')">
+                    <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.03);border-radius:12px;margin-bottom:2rem;border:1px solid var(--border);">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem;">📚</div>
+            <p style="color:var(--gray);margin:0;">Material de estudio disponible para descarga</p>
+        </div>
                     </div>
 
                     <div class="pdf-gallery" id="gallery-algebra">
                         <div class="empty-state" id="empty-algebra">
                             <div class="empty-state-icon">📂</div>
-                            <h3>No hay documentos disponibles en Álgebra</h3>
+                            <h3>No hay documentos de Álgebra disponibles</h3>
                             <p>Vuelve pronto para ver nuevo material</p>
                         </div>
                     </div>
@@ -1049,26 +1024,20 @@
                 </div>
 
                 <div class="content-area">
-                    <div class="storage-info admin-only" id="storage-geometria">
-                        <span>💾</span>
-                        <span>Material disponible: <strong id="size-geometria">0 MB</strong></span>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress-geometria" style="width: 0%"></div>
+                    
                         </div>
                     </div>
 
-                    <div class="pdf-upload-area admin-only" onclick="document.getElementById('pdf-geometria').click()" 
-                         ondrop="handleDrop(event, 'geometria')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
-                        <div class="pdf-upload-icon">📤</div>
-                        <div class="pdf-upload-text">Área de carga de documentos</div>
-                        <div class="pdf-upload-hint">Solo administradores pueden subir archivos</div>
-                        <input type="file" id="pdf-geometria" class="pdf-input" accept=".pdf" multiple onchange="handleFiles(this.files, 'geometria')">
+                    <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.03);border-radius:12px;margin-bottom:2rem;border:1px solid var(--border);">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem;">📚</div>
+            <p style="color:var(--gray);margin:0;">Material de estudio disponible para descarga</p>
+        </div>
                     </div>
 
                     <div class="pdf-gallery" id="gallery-geometria">
                         <div class="empty-state" id="empty-geometria">
                             <div class="empty-state-icon">📂</div>
-                            <h3>No hay documentos disponibles en Geometría</h3>
+                            <h3>No hay documentos de Geometría disponibles</h3>
                             <p>Vuelve pronto para ver nuevo material</p>
                         </div>
                     </div>
@@ -1086,26 +1055,20 @@
                 </div>
 
                 <div class="content-area">
-                    <div class="storage-info admin-only" id="storage-teoria-numeros">
-                        <span>💾</span>
-                        <span>Material disponible: <strong id="size-teoria-numeros">0 MB</strong></span>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress-teoria-numeros" style="width: 0%"></div>
+                    
                         </div>
                     </div>
 
-                    <div class="pdf-upload-area admin-only" onclick="document.getElementById('pdf-teoria-numeros').click()" 
-                         ondrop="handleDrop(event, 'teoria-numeros')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
-                        <div class="pdf-upload-icon">📤</div>
-                        <div class="pdf-upload-text">Área de carga de documentos</div>
-                        <div class="pdf-upload-hint">Solo administradores pueden subir archivos</div>
-                        <input type="file" id="pdf-teoria-numeros" class="pdf-input" accept=".pdf" multiple onchange="handleFiles(this.files, 'teoria-numeros')">
+                    <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.03);border-radius:12px;margin-bottom:2rem;border:1px solid var(--border);">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem;">📚</div>
+            <p style="color:var(--gray);margin:0;">Material de estudio disponible para descarga</p>
+        </div>
                     </div>
 
                     <div class="pdf-gallery" id="gallery-teoria-numeros">
                         <div class="empty-state" id="empty-teoria-numeros">
                             <div class="empty-state-icon">📂</div>
-                            <h3>No hay documentos disponibles en Teoría de Números</h3>
+                            <h3>No hay documentos de Teoría de Números disponibles</h3>
                             <p>Vuelve pronto para ver nuevo material</p>
                         </div>
                     </div>
@@ -1123,26 +1086,20 @@
                 </div>
 
                 <div class="content-area">
-                    <div class="storage-info admin-only" id="storage-combinatoria">
-                        <span>💾</span>
-                        <span>Material disponible: <strong id="size-combinatoria">0 MB</strong></span>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress-combinatoria" style="width: 0%"></div>
+                    
                         </div>
                     </div>
 
-                    <div class="pdf-upload-area admin-only" onclick="document.getElementById('pdf-combinatoria').click()" 
-                         ondrop="handleDrop(event, 'combinatoria')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
-                        <div class="pdf-upload-icon">📤</div>
-                        <div class="pdf-upload-text">Área de carga de documentos</div>
-                        <div class="pdf-upload-hint">Solo administradores pueden subir archivos</div>
-                        <input type="file" id="pdf-combinatoria" class="pdf-input" accept=".pdf" multiple onchange="handleFiles(this.files, 'combinatoria')">
+                    <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.03);border-radius:12px;margin-bottom:2rem;border:1px solid var(--border);">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem;">📚</div>
+            <p style="color:var(--gray);margin:0;">Material de estudio disponible para descarga</p>
+        </div>
                     </div>
 
                     <div class="pdf-gallery" id="gallery-combinatoria">
                         <div class="empty-state" id="empty-combinatoria">
                             <div class="empty-state-icon">📂</div>
-                            <h3>No hay documentos disponibles en Combinatoria</h3>
+                            <h3>No hay documentos de Combinatoria disponibles</h3>
                             <p>Vuelve pronto para ver nuevo material</p>
                         </div>
                     </div>
@@ -1160,20 +1117,14 @@
                 </div>
 
                 <div class="content-area">
-                    <div class="storage-info admin-only" id="storage-problemas">
-                        <span>💾</span>
-                        <span>Material disponible: <strong id="size-problemas">0 MB</strong></span>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress-problemas" style="width: 0%"></div>
+                    
                         </div>
                     </div>
 
-                    <div class="pdf-upload-area admin-only" onclick="document.getElementById('pdf-problemas').click()" 
-                         ondrop="handleDrop(event, 'problemas')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
-                        <div class="pdf-upload-icon">📤</div>
-                        <div class="pdf-upload-text">Área de carga de documentos</div>
-                        <div class="pdf-upload-hint">Solo administradores pueden subir archivos</div>
-                        <input type="file" id="pdf-problemas" class="pdf-input" accept=".pdf" multiple onchange="handleFiles(this.files, 'problemas')">
+                    <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.03);border-radius:12px;margin-bottom:2rem;border:1px solid var(--border);">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem;">📚</div>
+            <p style="color:var(--gray);margin:0;">Material de estudio disponible para descarga</p>
+        </div>
                     </div>
 
                     <div class="pdf-gallery" id="gallery-problemas">
@@ -1197,20 +1148,14 @@
                 </div>
 
                 <div class="content-area">
-                    <div class="storage-info admin-only" id="storage-examenes">
-                        <span>💾</span>
-                        <span>Material disponible: <strong id="size-examenes">0 MB</strong></span>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress-examenes" style="width: 0%"></div>
+                    
                         </div>
                     </div>
 
-                    <div class="pdf-upload-area admin-only" onclick="document.getElementById('pdf-examenes').click()" 
-                         ondrop="handleDrop(event, 'examenes')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
-                        <div class="pdf-upload-icon">📤</div>
-                        <div class="pdf-upload-text">Área de carga de documentos</div>
-                        <div class="pdf-upload-hint">Solo administradores pueden subir archivos</div>
-                        <input type="file" id="pdf-examenes" class="pdf-input" accept=".pdf" multiple onchange="handleFiles(this.files, 'examenes')">
+                    <div style="text-align:center;padding:1.5rem;background:rgba(255,255,255,0.03);border-radius:12px;margin-bottom:2rem;border:1px solid var(--border);">
+            <div style="font-size:1.5rem;margin-bottom:0.5rem;">📚</div>
+            <p style="color:var(--gray);margin:0;">Material de estudio disponible para descarga</p>
+        </div>
                     </div>
 
                     <div class="pdf-gallery" id="gallery-examenes">
@@ -1500,19 +1445,140 @@
             }
         });
 
-        initDatabase();
+        // GitHub PDF loader initialized on DOMContentLoaded
     
-        // Admin mode toggle - press Ctrl+Shift+A to show upload areas
-        let adminKeySequence = [];
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.shiftKey && e.key === 'A') {
-                e.preventDefault();
-                document.body.classList.toggle('admin-mode');
-                const isAdmin = document.body.classList.contains('admin-mode');
-                console.log('Admin mode:', isAdmin ? 'ON' : 'OFF');
-            }
-        });
 
+
+
+        // ==================== GITHUB PDF LOADER ====================
+
+        // Configuration - adjust these paths to match your GitHub repo structure
+        const REPO_OWNER = 'julianmartinez3858-lgtm';
+        const REPO_NAME = 'Boveda-olimpica-matematica';
+        const PDF_BASE_URL = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main/pdfs`;
+
+        // Define PDF files for each area (you'll update this list as you add files)
+        const PDF_CATALOG = {
+            'algebra': [],
+            'geometria': [],
+            'teoria-numeros': [],
+            'combinatoria': [],
+            'problemas': [],
+            'examenes': []
+        };
+
+        // Function to scan GitHub API for PDF files in each folder
+        async function scanGitHubPdfs() {
+            const areas = ['algebra', 'geometria', 'teoria-numeros', 'combinatoria', 'problemas', 'examenes'];
+
+            for (const area of areas) {
+                try {
+                    // Try to fetch directory listing from GitHub API
+                    const apiUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/pdfs/${area}`;
+                    const response = await fetch(apiUrl);
+
+                    if (response.ok) {
+                        const files = await response.json();
+                        const pdfs = files
+                            .filter(file => file.name.endsWith('.pdf'))
+                            .map(file => ({
+                                id: file.sha,
+                                name: file.name,
+                                size: file.size,
+                                date: new Date().toLocaleDateString('es-ES'),
+                                url: file.download_url
+                            }));
+
+                        PDF_CATALOG[area] = pdfs;
+                        renderGitHubGallery(area, pdfs);
+                    } else {
+                        // If API fails (rate limit or no files), show empty state
+                        renderGitHubGallery(area, []);
+                    }
+                } catch (error) {
+                    console.log(`No PDFs found in ${area} or API limit reached`);
+                    renderGitHubGallery(area, []);
+                }
+            }
+
+            updateGitHubStats();
+        }
+
+        function renderGitHubGallery(area, pdfs) {
+            const gallery = document.getElementById(`gallery-${area}`);
+            const empty = document.getElementById(`empty-${area}`);
+
+            // Clear existing items (keep empty state)
+            Array.from(gallery.children).forEach(child => {
+                if (child.id !== `empty-${area}`) {
+                    child.remove();
+                }
+            });
+
+            if (pdfs.length === 0) {
+                empty.style.display = 'block';
+            } else {
+                empty.style.display = 'none';
+
+                pdfs.forEach(pdf => {
+                    const item = createGitHubPdfItem(pdf);
+                    gallery.appendChild(item);
+                });
+            }
+
+            updatePdfCounts(area, pdfs.length);
+        }
+
+        function createGitHubPdfItem(pdf) {
+            const div = document.createElement('div');
+            div.className = 'pdf-item';
+            div.innerHTML = `
+                <div class="pdf-preview">
+                    <span>📄</span>
+                    <span class="pdf-badge">PDF</span>
+                </div>
+                <div class="pdf-info">
+                    <div class="pdf-title" title="${pdf.name}">${pdf.name}</div>
+                    <div class="pdf-meta">
+                        <span>${pdf.date}</span>
+                        <span>${formatSize(pdf.size)}</span>
+                    </div>
+                    <div class="pdf-actions">
+                        <a class="pdf-btn" href="${pdf.url}" target="_blank">
+                            <span>👁️</span> Ver
+                        </a>
+                        <a class="pdf-btn secondary" href="${pdf.url}" download="${pdf.name}">
+                            <span>⬇️</span> Descargar
+                        </a>
+                    </div>
+                </div>
+            `;
+            return div;
+        }
+
+        function updateGitHubStats() {
+            let totalPdfs = 0;
+            let totalSize = 0;
+
+            Object.values(PDF_CATALOG).forEach(pdfs => {
+                totalPdfs += pdfs.length;
+                totalSize += pdfs.reduce((sum, p) => sum + (p.size || 0), 0);
+            });
+
+            document.getElementById('statPdfs').textContent = totalPdfs;
+            document.getElementById('statSize').textContent = formatSize(totalSize);
+        }
+
+        function updatePdfCounts(area, count) {
+            document.querySelectorAll(`.pdf-count[data-area="${area}"]`).forEach(el => {
+                el.textContent = count;
+            });
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            scanGitHubPdfs();
+        });
     </script>
 </body>
 </html>
